@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Software Developer",
-    "imagePath": "career/software.jpg",
+    "imagePath": "assets/illustrations/developer-activity.svg",
     "description": "Design, develop, and maintain software applications for various platforms including web, mobile, and desktop. Work with programming languages, frameworks, and tools to create efficient and scalable solutions.",
     "short_description": "Build software applications.",
     "salary_range": "$800 - $3,000 / month",
@@ -22,7 +22,7 @@
   {
     "id": "2",
     "name": "Web Developer",
-    "imagePath": "career/web.jpg",
+    "imagePath": "assets/illustrations/website-creator.svg",
     "description": "Create and maintain websites and web applications using modern technologies. Work on both frontend and backend development, ensuring responsive design and optimal user experience.",
     "short_description": "Build and maintain web applications.",
     "salary_range": "$700 - $2,500 / month",
@@ -43,7 +43,7 @@
   {
     "id": "3",
     "name": "Data Scientist",
-    "imagePath": "career/data.jpg",
+    "imagePath": "assets/illustrations/data-report.svg",
     "description": "Analyze complex data sets to help organizations make data-driven decisions. Use statistical methods, machine learning algorithms, and data visualization to extract meaningful insights.",
     "short_description": "Extract insights from data.",
     "salary_range": "$1,000 - $3,500 / month",
@@ -64,11 +64,17 @@
   {
     "id": "4",
     "name": "Mobile App Developer",
-    "imagePath": "career/mobile.jpg",
+    "imagePath": "assets/illustrations/mobile-development.svg",
     "description": "Develop applications for mobile devices including iOS and Android platforms. Create user-friendly interfaces and ensure optimal performance across different devices.",
     "short_description": "Build mobile applications.",
     "salary_range": "$800 - $2,800 / month",
-    "skills": ["Flutter", "React Native", "Swift", "Kotlin", "UI/UX Design"],
+    "skills": [
+      "Flutter",
+      "React Native",
+      "Swift",
+      "Kotlin",
+      "UI/UX Design"
+    ],
     "career_progression": {
       "Entry": "Junior Mobile Developer - Implement features, fix bugs, learn platform specifics",
       "Mid": "Mobile Developer - Lead app development, optimize performance",
@@ -78,7 +84,7 @@
   {
     "id": "5",
     "name": "Cybersecurity Analyst",
-    "imagePath": "career/cyber.webp",
+    "imagePath": "assets/illustrations/security.svg",
     "description": "Protect organizations from digital threats by implementing security measures, monitoring systems, and responding to security incidents.",
     "short_description": "Protect systems from cyber threats.",
     "salary_range": "$900 - $3,000 / month",
@@ -97,7 +103,7 @@
   {
     "id": "6",
     "name": "Database Administrator",
-    "imagePath": "career/database.jpg",
+    "imagePath": "assets/illustrations/cloud-hosting.svg",
     "description": "Manage and maintain database systems, ensuring data integrity, security, and optimal performance. Design database structures and optimize queries.",
     "short_description": "Manage database systems.",
     "salary_range": "$700 - $2,500 / month",
@@ -116,11 +122,17 @@
   {
     "id": "7",
     "name": "DevOps Engineer",
-    "imagePath": "career/devops.jpg",
+    "imagePath": "assets/illustrations/software-integration.svg",
     "description": "Bridge the gap between development and operations teams by automating deployment processes, managing infrastructure, and ensuring reliable software delivery.",
     "short_description": "Automate software deployment and infrastructure.",
     "salary_range": "$1,000 - $3,500 / month",
-    "skills": ["CI/CD", "Docker", "Kubernetes", "Cloud Platforms", "Scripting"],
+    "skills": [
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "Cloud Platforms",
+      "Scripting"
+    ],
     "career_progression": {
       "Entry": "DevOps Engineer - Automate basic processes, deployment",
       "Mid": "Senior DevOps Engineer - Infrastructure design, monitoring",
@@ -130,7 +142,7 @@
   {
     "id": "8",
     "name": "AI/ML Engineer",
-    "imagePath": "career/ai.jpg",
+    "imagePath": "assets/illustrations/robot-arm.svg",
     "description": "Design and implement artificial intelligence and machine learning systems. Work on developing algorithms, training models, and deploying AI solutions.",
     "short_description": "Build AI and machine learning systems.",
     "salary_range": "$1,200 - $4,000 / month",
@@ -150,7 +162,7 @@
   {
     "id": "9",
     "name": "UI/UX Designer",
-    "imagePath": "career/uxui.webp",
+    "imagePath": "assets/illustrations/ui-ux-design.svg",
     "description": "Design user interfaces and enhance user experience for digital products. Conduct user research, create wireframes, and ensure intuitive design solutions.",
     "short_description": "Create intuitive user experiences.",
     "salary_range": "$600 - $2,200 / month",
@@ -170,7 +182,7 @@
   {
     "id": "10",
     "name": "Business Analyst",
-    "imagePath": "career/business.jpg",
+    "imagePath": "assets/illustrations/swot-analysis.svg",
     "description": "Analyze business needs and translate them into technical requirements. Bridge communication between business stakeholders and technical teams.",
     "short_description": "Analyze business requirements.",
     "salary_range": "$700 - $2,500 / month",
@@ -189,7 +201,7 @@
   {
     "id": "11",
     "name": "Research Scientist",
-    "imagePath": "career/research.webp",
+    "imagePath": "assets/illustrations/researchers.svg",
     "description": "Conduct scientific research and experiments in various fields including physics, chemistry, biology, and computer science. Publish findings and advance knowledge.",
     "short_description": "Conduct scientific research.",
     "salary_range": "$500 - $2,000 / month",
@@ -208,7 +220,7 @@
   {
     "id": "12",
     "name": "Civil Engineer",
-    "imagePath": "career/civil.webp",
+    "imagePath": "assets/illustrations/construction-worker.svg",
     "description": "Design, plan, and supervise construction projects including roads, bridges, buildings, and infrastructure. Ensure safety and compliance with regulations.",
     "short_description": "Design infrastructure projects.",
     "salary_range": "$600 - $2,500 / month",
@@ -227,7 +239,7 @@
   {
     "id": "13",
     "name": "Doctor",
-    "imagePath": "career/doctor.jpg",
+    "imagePath": "assets/illustrations/doctors.svg",
     "description": "Diagnose and treat medical conditions, provide preventive care, and promote overall health and wellness for patients across all age groups.",
     "short_description": "Provide medical care and treatment.",
     "salary_range": "$1,500 - $5,000 / month",
@@ -246,7 +258,7 @@
   {
     "id": "14",
     "name": "Nurse",
-    "imagePath": "career/nurse.jpg",
+    "imagePath": "assets/illustrations/health-professional-team.svg",
     "description": "Provide comprehensive patient care in various healthcare settings. Administer medications, monitor patient conditions, and support recovery processes.",
     "short_description": "Provide patient care and support.",
     "salary_range": "$400 - $1,500 / month",
@@ -265,7 +277,7 @@
   {
     "id": "15",
     "name": "Pharmacist",
-    "imagePath": "career/pharmacist.webp",
+    "imagePath": "assets/illustrations/medical-prescription.svg",
     "description": "Dispense medications, counsel patients on proper usage, and ensure safe and effective drug therapy. Manage pharmacy operations and inventory.",
     "short_description": "Manage medications and patient counseling.",
     "salary_range": "$800 - $2,000 / month",
@@ -284,7 +296,7 @@
   {
     "id": "16",
     "name": "Marketing Manager",
-    "imagePath": "career/marketing.jpg",
+    "imagePath": "assets/illustrations/marketing-consulting.svg",
     "description": "Develop and execute marketing strategies to promote products and services. Manage campaigns, analyze market trends, and drive brand growth.",
     "short_description": "Develop marketing strategies.",
     "salary_range": "$700 - $2,800 / month",
@@ -303,7 +315,7 @@
   {
     "id": "17",
     "name": "Financial Analyst",
-    "imagePath": "career/finance.jpg",
+    "imagePath": "assets/illustrations/financial-data.svg",
     "description": "Analyze financial data to help organizations make investment decisions. Prepare reports, forecast trends, and evaluate financial performance.",
     "short_description": "Analyze financial data and investments.",
     "salary_range": "$600 - $2,500 / month",
@@ -322,7 +334,7 @@
   {
     "id": "18",
     "name": "Teacher/Educator",
-    "imagePath": "career/teacher.jpg",
+    "imagePath": "assets/illustrations/teacher.svg",
     "description": "Educate and inspire students at various levels. Develop curriculum, assess learning, and create engaging learning environments.",
     "short_description": "Educate and mentor students.",
     "salary_range": "$250 - $1,200 / month",
@@ -341,7 +353,7 @@
   {
     "id": "19",
     "name": "Graphic Designer",
-    "imagePath": "career/designer.webp",
+    "imagePath": "assets/illustrations/designer.svg",
     "description": "Create visual content for print and digital media. Design logos, websites, advertisements, and marketing materials using creative software tools.",
     "short_description": "Create visual designs and graphics.",
     "salary_range": "$400 - $1,800 / month",
@@ -360,7 +372,7 @@
   {
     "id": "20",
     "name": "Project Manager",
-    "imagePath": "career/projectmanager.webp",
+    "imagePath": "assets/illustrations/forming-team-leadership.svg",
     "description": "Plan, execute, and oversee projects from initiation to completion. Coordinate teams, manage resources, and ensure project success within budget and timeline.",
     "short_description": "Manage project execution and delivery.",
     "salary_range": "$800 - $3,000 / month",
@@ -379,7 +391,7 @@
   {
     "id": "21",
     "name": "Lawyer/Attorney",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/lawyer.svg",
     "description": "Represent clients in legal matters, provide legal advice, draft legal documents, and advocate in court proceedings. Specialize in areas such as corporate law, criminal law, or family law.",
     "short_description": "Provide legal representation and counsel.",
     "salary_range": "$800 - $3,500 / month",
@@ -399,7 +411,7 @@
   {
     "id": "22",
     "name": "Corporate Lawyer",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/signing-a-contract.svg",
     "description": "Advise corporations on legal rights, responsibilities, and obligations. Handle mergers, acquisitions, compliance, and corporate governance matters.",
     "short_description": "Handle corporate legal matters.",
     "salary_range": "$1,000 - $4,000 / month",
@@ -419,7 +431,7 @@
   {
     "id": "23",
     "name": "Accountant",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/accountant.svg",
     "description": "Manage financial records, prepare tax returns, conduct audits, and ensure compliance with financial regulations. Provide financial advice to individuals and organizations.",
     "short_description": "Manage financial records and compliance.",
     "salary_range": "$500 - $2,000 / month",
@@ -439,7 +451,7 @@
   {
     "id": "24",
     "name": "Human Resources Manager",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/interview.svg",
     "description": "Manage recruitment, employee relations, training and development, and organizational culture. Ensure compliance with labor laws and maintain positive workplace environment.",
     "short_description": "Manage human resources and talent.",
     "salary_range": "$600 - $2,500 / month",
@@ -459,7 +471,7 @@
   {
     "id": "25",
     "name": "Content Writer",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/novelist-writing.svg",
     "description": "Create engaging written content for websites, blogs, social media, and marketing materials. Research topics and adapt writing style to target audiences.",
     "short_description": "Create written content for various platforms.",
     "salary_range": "$300 - $1,500 / month",
@@ -479,7 +491,7 @@
   {
     "id": "26",
     "name": "Architect",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/construction-hat.svg",
     "description": "Design buildings and structures, create detailed plans, and oversee construction projects. Balance aesthetics, functionality, and safety in architectural designs.",
     "short_description": "Design buildings and structures.",
     "salary_range": "$700 - $3,000 / month",
@@ -499,7 +511,7 @@
   {
     "id": "27",
     "name": "Chef/Cook",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/female-chef.svg",
     "description": "Prepare and cook meals in restaurants, hotels, or catering services. Create menus, manage kitchen operations, and ensure food quality and safety standards.",
     "short_description": "Prepare and create culinary dishes.",
     "salary_range": "$300 - $1,800 / month",
@@ -519,7 +531,7 @@
   {
     "id": "28",
     "name": "Electrician",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/electrician.svg",
     "description": "Install, maintain, and repair electrical systems in residential, commercial, and industrial settings. Ensure electrical safety and compliance with regulations.",
     "short_description": "Install and repair electrical systems.",
     "salary_range": "$400 - $1,500 / month",
@@ -539,7 +551,7 @@
   {
     "id": "29",
     "name": "Agricultural Specialist",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/rice-field.svg",
     "description": "Provide expertise in crop production, soil management, and sustainable farming practices. Advise farmers on improving yield and implementing modern agricultural techniques.",
     "short_description": "Advise on farming and crop production.",
     "salary_range": "$400 - $1,800 / month",
@@ -559,7 +571,7 @@
   {
     "id": "30",
     "name": "Photographer",
-    "imagePath": "career/temp.jpg",
+    "imagePath": "assets/illustrations/studio-photographer.svg",
     "description": "Capture professional photographs for events, portraits, commercial projects, and artistic purposes. Edit images and manage client relationships.",
     "short_description": "Capture professional photographs.",
     "salary_range": "$300 - $2,000 / month",
@@ -574,6 +586,306 @@
       "Entry": "Assistant Photographer - Assist shoots, basic editing",
       "Mid": "Photographer - Independent shoots, client management",
       "Senior": "Senior Photographer - Studio ownership, specialized work, mentor others"
+    }
+  },
+  {
+    "id": "31",
+    "name": "Data Analyst",
+    "imagePath": "assets/illustrations/data-analysis.svg",
+    "description": "Collect, clean and analyse data, then build reports and dashboards that help teams make decisions.",
+    "short_description": "Find answers in data.",
+    "salary_range": "$600 - $2,000 / month",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Data Visualization",
+      "Statistics",
+      "Communication"
+    ],
+    "career_progression": {
+      "Entry": "Junior Analyst - Clean data, build reports",
+      "Mid": "Data Analyst - Own dashboards, run analyses",
+      "Senior": "Analytics Lead - Set metrics, lead the analytics team"
+    }
+  },
+  {
+    "id": "32",
+    "name": "Tour Guide",
+    "imagePath": "assets/illustrations/people-sightseeing-outdoors.svg",
+    "description": "Lead visitors around temples, cities and nature sites, telling the history and culture behind them.",
+    "short_description": "Show visitors the country.",
+    "salary_range": "$300 - $1,200 / month",
+    "skills": [
+      "Storytelling",
+      "Languages",
+      "History",
+      "Customer Service",
+      "Organisation"
+    ],
+    "career_progression": {
+      "Entry": "Assistant Guide - Support tours, learn routes",
+      "Mid": "Licensed Guide - Lead tours independently",
+      "Senior": "Tour Manager - Design itineraries, manage guides"
+    }
+  },
+  {
+    "id": "33",
+    "name": "Hotel Manager",
+    "imagePath": "assets/illustrations/hotel-booking.svg",
+    "description": "Oversee hotel operations: front desk, rooms, food and beverage, staff and guest satisfaction.",
+    "short_description": "Run a hotel smoothly.",
+    "salary_range": "$700 - $3,000 / month",
+    "skills": [
+      "Leadership",
+      "Operations",
+      "Customer Service",
+      "Budgeting",
+      "Problem Solving"
+    ],
+    "career_progression": {
+      "Entry": "Front Office Agent - Check-ins, guest requests",
+      "Mid": "Department Manager - Run rooms or F&B",
+      "Senior": "General Manager - Whole-hotel strategy and results"
+    }
+  },
+  {
+    "id": "34",
+    "name": "Psychologist / Counsellor",
+    "imagePath": "assets/illustrations/psychologist.svg",
+    "description": "Assess and support people facing stress, anxiety, trauma or life changes through counselling and therapy.",
+    "short_description": "Support mental health.",
+    "salary_range": "$500 - $2,000 / month",
+    "skills": [
+      "Active Listening",
+      "Assessment",
+      "Empathy",
+      "Ethics",
+      "Communication"
+    ],
+    "career_progression": {
+      "Entry": "Counselling Assistant - Intake, support sessions",
+      "Mid": "Counsellor - Own a caseload of clients",
+      "Senior": "Clinical Lead - Supervise counsellors, design programmes"
+    }
+  },
+  {
+    "id": "35",
+    "name": "Dentist",
+    "imagePath": "assets/illustrations/hospital-room.svg",
+    "description": "Examine, diagnose and treat dental problems, from fillings and cleanings to surgery.",
+    "short_description": "Care for teeth and smiles.",
+    "salary_range": "$1,000 - $4,000 / month",
+    "skills": [
+      "Clinical Skills",
+      "Precision",
+      "Patient Care",
+      "Diagnosis",
+      "Hygiene"
+    ],
+    "career_progression": {
+      "Entry": "Dental Intern - Supervised treatment",
+      "Mid": "General Dentist - Own patients and clinic chair",
+      "Senior": "Clinic Owner / Specialist - Run a practice or specialise"
+    }
+  },
+  {
+    "id": "36",
+    "name": "Diplomat",
+    "imagePath": "assets/illustrations/ambassador.svg",
+    "description": "Represent Cambodia in other countries and international organisations, negotiating and building relationships.",
+    "short_description": "Represent your country abroad.",
+    "salary_range": "$700 - $2,500 / month",
+    "skills": [
+      "Negotiation",
+      "Foreign Languages",
+      "Policy Analysis",
+      "Protocol",
+      "Writing"
+    ],
+    "career_progression": {
+      "Entry": "Attaché - Research, reports, events",
+      "Mid": "Secretary / Counsellor - Lead files, negotiate",
+      "Senior": "Ambassador - Head a mission abroad"
+    }
+  },
+  {
+    "id": "37",
+    "name": "Translator / Interpreter",
+    "imagePath": "assets/illustrations/translator.svg",
+    "description": "Translate documents and interpret conversations between Khmer, English and other languages.",
+    "short_description": "Bridge languages.",
+    "salary_range": "$500 - $2,000 / month",
+    "skills": [
+      "Languages",
+      "Writing",
+      "Accuracy",
+      "Cultural Knowledge",
+      "Listening"
+    ],
+    "career_progression": {
+      "Entry": "Junior Translator - Documents with review",
+      "Mid": "Translator / Interpreter - Own projects, meetings",
+      "Senior": "Senior / Conference Interpreter - High-level events"
+    }
+  },
+  {
+    "id": "38",
+    "name": "Logistics Coordinator",
+    "imagePath": "assets/illustrations/delivery.svg",
+    "description": "Plan shipments, manage warehouses and suppliers, and make sure goods arrive on time and on budget.",
+    "short_description": "Keep goods moving.",
+    "salary_range": "$500 - $1,800 / month",
+    "skills": [
+      "Planning",
+      "Inventory",
+      "Negotiation",
+      "Excel",
+      "Problem Solving"
+    ],
+    "career_progression": {
+      "Entry": "Logistics Assistant - Track shipments, paperwork",
+      "Mid": "Coordinator - Plan routes, manage suppliers",
+      "Senior": "Supply Chain Manager - Whole-network strategy"
+    }
+  },
+  {
+    "id": "39",
+    "name": "Musician",
+    "imagePath": "assets/illustrations/playing-music.svg",
+    "description": "Perform, record and teach music, playing live, in studios or for film and events.",
+    "short_description": "Make and perform music.",
+    "salary_range": "$300 - $2,000 / month",
+    "skills": [
+      "Performance",
+      "Practice",
+      "Composition",
+      "Collaboration",
+      "Self-promotion"
+    ],
+    "career_progression": {
+      "Entry": "Session / Band Musician - Gigs and recordings",
+      "Mid": "Performer / Teacher - Regular shows, students",
+      "Senior": "Composer / Music Director - Lead productions"
+    }
+  },
+  {
+    "id": "40",
+    "name": "Interior Designer",
+    "imagePath": "assets/illustrations/furniture-store.svg",
+    "description": "Plan and design interiors for homes, offices, hotels and shops, from layout to furniture and lighting.",
+    "short_description": "Design inspiring spaces.",
+    "salary_range": "$500 - $2,500 / month",
+    "skills": [
+      "Space Planning",
+      "SketchUp / 3D",
+      "Materials",
+      "Client Communication",
+      "Budgeting"
+    ],
+    "career_progression": {
+      "Entry": "Junior Designer - Drawings, mood boards",
+      "Mid": "Interior Designer - Lead client projects",
+      "Senior": "Design Director - Run a studio"
+    }
+  },
+  {
+    "id": "41",
+    "name": "Veterinarian",
+    "imagePath": "assets/illustrations/pet-care.svg",
+    "description": "Diagnose and treat sick or injured animals, from pets in clinics to livestock on farms.",
+    "short_description": "Keep animals healthy.",
+    "salary_range": "$600 - $2,500 / month",
+    "skills": [
+      "Animal Care",
+      "Diagnosis",
+      "Surgery",
+      "Communication",
+      "Compassion"
+    ],
+    "career_progression": {
+      "Entry": "Vet Intern - Supervised clinical work",
+      "Mid": "Veterinarian - Own cases and surgeries",
+      "Senior": "Clinic Owner / Specialist - Run a practice"
+    }
+  },
+  {
+    "id": "42",
+    "name": "Midwife",
+    "imagePath": "assets/illustrations/midwives.svg",
+    "description": "Support women through pregnancy, labour and after birth, and care for newborns.",
+    "short_description": "Help bring babies into the world.",
+    "salary_range": "$400 - $1,500 / month",
+    "skills": [
+      "Prenatal Care",
+      "Calm Under Pressure",
+      "Newborn Care",
+      "Counselling",
+      "Teamwork"
+    ],
+    "career_progression": {
+      "Entry": "Midwife Trainee - Supervised deliveries",
+      "Mid": "Midwife - Independent care in clinics",
+      "Senior": "Senior Midwife - Lead a maternity unit"
+    }
+  },
+  {
+    "id": "43",
+    "name": "Environmental Officer",
+    "imagePath": "assets/illustrations/environmental-audit.svg",
+    "description": "Monitor pollution, run environmental assessments and help organisations meet sustainability goals.",
+    "short_description": "Protect the environment.",
+    "salary_range": "$500 - $1,800 / month",
+    "skills": [
+      "Field Research",
+      "Data Analysis",
+      "Regulations",
+      "Report Writing",
+      "GIS"
+    ],
+    "career_progression": {
+      "Entry": "Field Officer - Sampling and surveys",
+      "Mid": "Environmental Officer - Assessments, compliance",
+      "Senior": "Sustainability Manager - Strategy and policy"
+    }
+  },
+  {
+    "id": "44",
+    "name": "Laboratory Technician",
+    "imagePath": "assets/illustrations/laboratory.svg",
+    "description": "Prepare samples and run laboratory tests in hospitals, research labs and industry.",
+    "short_description": "Run the tests behind diagnoses.",
+    "salary_range": "$400 - $1,500 / month",
+    "skills": [
+      "Lab Techniques",
+      "Accuracy",
+      "Equipment Handling",
+      "Safety",
+      "Record Keeping"
+    ],
+    "career_progression": {
+      "Entry": "Lab Assistant - Sample prep, cleaning",
+      "Mid": "Lab Technician - Run and validate tests",
+      "Senior": "Lab Manager - Run the laboratory"
+    }
+  },
+  {
+    "id": "45",
+    "name": "Entrepreneur",
+    "imagePath": "assets/illustrations/startup-life.svg",
+    "description": "Turn an idea into a business: find customers, raise money, hire a team and grow.",
+    "short_description": "Build your own business.",
+    "salary_range": "Varies widely",
+    "skills": [
+      "Leadership",
+      "Sales",
+      "Finance",
+      "Resilience",
+      "Decision Making"
+    ],
+    "career_progression": {
+      "Entry": "Founder - Validate the idea, first customers",
+      "Mid": "Growing Business - Team, funding, operations",
+      "Senior": "Established Owner - Scale, invest, mentor"
     }
   }
 ]

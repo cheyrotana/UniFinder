@@ -1,5 +1,6 @@
 import '../Domain/data/repository/career_repository.dart';
 import '../Domain/data/repository/relationship_repository.dart';
+import '../Domain/model/Career/career_major.dart';
 import '../Domain/model/Career/career_model.dart';
 
 class CareerService {
@@ -17,5 +18,10 @@ class CareerService {
   Future<List<Career>> getCareersForMajor(String majorId) async {
     final allCareers = await _careerRepository.getCareerData();
     return await _relationshipRepository.getCareersByMajor(majorId, allCareers);
+  }
+
+  // Get every career <-> major link
+  Future<List<CareerMajor>> getCareerMajorsData() async {
+    return await _relationshipRepository.getCareerMajorsData();
   }
 }

@@ -5,12 +5,16 @@ class Major {
   final String description;
   final List<String> keySkills;
 
+  /// The major's photo (an asset path), shown on cards and headers.
+  final String? imagePath;
+
   Major({
     this.id,
     required this.name,
     required this.categoryId,
     required this.description,
     this.keySkills = const [],
+    this.imagePath,
   });
 
   factory Major.fromMap(Map<String, dynamic> map) {
@@ -22,6 +26,7 @@ class Major {
       keySkills: map['key_skills'] != null
           ? List<String>.from(map['key_skills'])
           : [],
+      imagePath: map['image_path'],
     );
   }
 
@@ -32,6 +37,7 @@ class Major {
       'category_id': categoryId,
       'description': description,
       'key_skills': keySkills,
+      'image_path': imagePath,
     };
   }
 }

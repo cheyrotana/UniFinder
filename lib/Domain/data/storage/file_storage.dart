@@ -11,7 +11,7 @@ class FileStorage {
   Future<List<dynamic>> readJsonData(String filename) async {
     try {
       if (kIsWeb) {
-        final contents = await rootBundle.loadString('data/$filename');
+        final contents = await rootBundle.loadString('assets/data/$filename');
         return jsonDecode(contents);
       } else {
         final file = File('$directoryPath/$filename');
@@ -20,7 +20,7 @@ class FileStorage {
           return jsonDecode(contents);
         }
         try {
-          final contents = await rootBundle.loadString('data/$filename');
+          final contents = await rootBundle.loadString('assets/data/$filename');
           return jsonDecode(contents);
         } catch (e) {
           return [];

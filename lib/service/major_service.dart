@@ -20,4 +20,9 @@ class MajorService {
   Future<List<Major>> getRelatedMajorsForPrimary(String majorId) async {
     return await _majorRepository.getRelatedMajors(majorId);
   }
+
+  // Get every major's related major IDs, keyed by major ID
+  Future<Map<String, List<String>>> getMajorRelationships() async {
+    return await _majorRepository.getMajorRelationships();
+  }
 }

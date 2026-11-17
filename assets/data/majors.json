@@ -10,7 +10,8 @@
       "Data Structures",
       "Problem Solving",
       "Software Development"
-    ]
+    ],
+    "image_path": "assets/illustrations/programming.svg"
   },
   {
     "id": "2",
@@ -23,7 +24,8 @@
       "Testing",
       "Version Control",
       "Agile Development"
-    ]
+    ],
+    "image_path": "assets/illustrations/software-engineer.svg"
   },
   {
     "id": "3",
@@ -36,7 +38,8 @@
       "Cybersecurity",
       "Database Management",
       "IT Infrastructure"
-    ]
+    ],
+    "image_path": "assets/illustrations/server.svg"
   },
   {
     "id": "4",
@@ -49,7 +52,8 @@
       "Technical Drawing",
       "Risk Assessment",
       "Quality Control"
-    ]
+    ],
+    "image_path": "assets/illustrations/construction-crane.svg"
   },
   {
     "id": "5",
@@ -62,7 +66,8 @@
       "Building Codes",
       "Sustainability",
       "Construction Technology"
-    ]
+    ],
+    "image_path": "assets/illustrations/architect.svg"
   },
   {
     "id": "6",
@@ -75,7 +80,8 @@
       "Power Distribution",
       "Electronics",
       "Control Systems"
-    ]
+    ],
+    "image_path": "assets/illustrations/printed-circuit-board.svg"
   },
   {
     "id": "7",
@@ -88,7 +94,8 @@
       "Strategic Planning",
       "Project Management",
       "Communication"
-    ]
+    ],
+    "image_path": "assets/illustrations/business-plan.svg"
   },
   {
     "id": "8",
@@ -101,7 +108,8 @@
       "Policy Evaluation",
       "Market Research",
       "Critical Thinking"
-    ]
+    ],
+    "image_path": "assets/illustrations/finance.svg"
   },
   {
     "id": "9",
@@ -114,7 +122,8 @@
       "Auditing",
       "Financial Reporting",
       "Cost Analysis"
-    ]
+    ],
+    "image_path": "assets/illustrations/calculator.svg"
   },
   {
     "id": "10",
@@ -127,7 +136,8 @@
       "Digital Marketing",
       "Consumer Behavior",
       "Campaign Strategy"
-    ]
+    ],
+    "image_path": "assets/illustrations/marketing.svg"
   },
   {
     "id": "11",
@@ -140,7 +150,8 @@
       "Risk Management",
       "Portfolio Management",
       "Financial Modeling"
-    ]
+    ],
+    "image_path": "assets/illustrations/investment-data.svg"
   },
   {
     "id": "12",
@@ -153,7 +164,8 @@
       "Training & Development",
       "Labor Law",
       "Organizational Behavior"
-    ]
+    ],
+    "image_path": "assets/illustrations/hired.svg"
   },
   {
     "id": "13",
@@ -166,7 +178,8 @@
       "Case Analysis",
       "Negotiation",
       "Ethical Reasoning"
-    ]
+    ],
+    "image_path": "assets/illustrations/law-firm.svg"
   },
   {
     "id": "14",
@@ -179,7 +192,8 @@
       "Visual Communication",
       "Art History",
       "Portfolio Development"
-    ]
+    ],
+    "image_path": "assets/illustrations/artist.svg"
   },
   {
     "id": "15",
@@ -192,7 +206,8 @@
       "Layout Design",
       "Color Theory",
       "Brand Identity"
-    ]
+    ],
+    "image_path": "assets/illustrations/design-inspiration.svg"
   },
   {
     "id": "16",
@@ -205,7 +220,8 @@
       "Classroom Management",
       "Student Assessment",
       "Educational Technology"
-    ]
+    ],
+    "image_path": "assets/illustrations/teacher-student.svg"
   },
   {
     "id": "17",
@@ -218,7 +234,8 @@
       "Public Relations",
       "Content Strategy",
       "Digital Media"
-    ]
+    ],
+    "image_path": "assets/illustrations/podcast.svg"
   },
   {
     "id": "18",
@@ -231,7 +248,8 @@
       "Menu Development",
       "Kitchen Management",
       "Food Presentation"
-    ]
+    ],
+    "image_path": "assets/illustrations/chef.svg"
   },
   {
     "id": "19",
@@ -244,7 +262,8 @@
       "Sustainable Farming",
       "Animal Husbandry",
       "Resource Management"
-    ]
+    ],
+    "image_path": "assets/illustrations/farmer.svg"
   },
   {
     "id": "20",
@@ -257,7 +276,8 @@
       "Problem Solving",
       "Computational Methods",
       "Abstract Reasoning"
-    ]
+    ],
+    "image_path": "assets/illustrations/mathematics.svg"
   },
   {
     "id": "21",
@@ -270,7 +290,8 @@
       "Data Analysis",
       "Mathematical Modeling",
       "Research Skills"
-    ]
+    ],
+    "image_path": "assets/illustrations/rocket-research.svg"
   },
   {
     "id": "22",
@@ -283,7 +304,8 @@
       "Molecular Structure",
       "Research Methods",
       "Safety Protocols"
-    ]
+    ],
+    "image_path": "assets/illustrations/chemistry-lab.svg"
   },
   {
     "id": "23",
@@ -296,7 +318,8 @@
       "Data Analysis",
       "Genetics",
       "Ecology"
-    ]
+    ],
+    "image_path": "assets/illustrations/biologist.svg"
   },
   {
     "id": "24",
@@ -309,7 +332,8 @@
       "Medical Research",
       "Emergency Response",
       "Ethical Decision Making"
-    ]
+    ],
+    "image_path": "assets/illustrations/doctor.svg"
   },
   {
     "id": "25",
@@ -322,7 +346,8 @@
       "Medication Management",
       "Health Assessment",
       "Emergency Care"
-    ]
+    ],
+    "image_path": "assets/illustrations/nurse.svg"
   },
   {
     "id": "26",
@@ -335,7 +360,8 @@
       "Patient Counseling",
       "Pharmaceutical Chemistry",
       "Clinical Practice"
-    ]
+    ],
+    "image_path": "assets/illustrations/pharmacist.svg"
   },
   {
     "id": "27",
@@ -348,6 +374,329 @@
       "Disease Prevention",
       "Community Health",
       "Health Education"
-    ]
+    ],
+    "image_path": "assets/illustrations/medical-care.svg"
+  },
+  {
+    "id": "28",
+    "name": "Data Science",
+    "category_id": "1",
+    "description": "Turn raw data into insight with statistics, programming and machine learning.",
+    "key_skills": [
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Data Visualization",
+      "SQL"
+    ],
+    "image_path": "assets/illustrations/data-extraction.svg"
+  },
+  {
+    "id": "29",
+    "name": "Cybersecurity",
+    "category_id": "1",
+    "description": "Protect systems, networks and data from attacks, and respond when they happen.",
+    "key_skills": [
+      "Network Security",
+      "Ethical Hacking",
+      "Cryptography",
+      "Incident Response",
+      "Risk Assessment"
+    ],
+    "image_path": "assets/illustrations/cyber-attack.svg"
+  },
+  {
+    "id": "30",
+    "name": "Artificial Intelligence",
+    "category_id": "1",
+    "description": "Build systems that learn, see, understand language and make decisions.",
+    "key_skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "Linear Algebra",
+      "Problem Solving"
+    ],
+    "image_path": "assets/illustrations/artificial-intelligence.svg"
+  },
+  {
+    "id": "31",
+    "name": "Mechanical Engineering",
+    "category_id": "1",
+    "description": "Design, build and maintain machines, engines and manufacturing systems.",
+    "key_skills": [
+      "CAD Design",
+      "Thermodynamics",
+      "Mechanics",
+      "Materials Science",
+      "Prototyping"
+    ],
+    "image_path": "assets/illustrations/product-teardown.svg"
+  },
+  {
+    "id": "32",
+    "name": "Telecommunications Engineering",
+    "category_id": "1",
+    "description": "Design the networks that carry voice, video and data: mobile, fibre and satellite.",
+    "key_skills": [
+      "Signal Processing",
+      "Networking",
+      "Wireless Systems",
+      "Electronics",
+      "Troubleshooting"
+    ],
+    "image_path": "assets/illustrations/broadcast.svg"
+  },
+  {
+    "id": "33",
+    "name": "International Business",
+    "category_id": "2",
+    "description": "Run companies across borders: global trade, markets, cultures and strategy.",
+    "key_skills": [
+      "Global Strategy",
+      "Trade Law",
+      "Negotiation",
+      "Cross-cultural Communication",
+      "Market Analysis"
+    ],
+    "image_path": "assets/illustrations/international-trade.svg"
+  },
+  {
+    "id": "34",
+    "name": "Tourism & Hospitality Management",
+    "category_id": "2",
+    "description": "Manage hotels, travel and tourism experiences in one of Cambodia's biggest industries.",
+    "key_skills": [
+      "Customer Service",
+      "Event Planning",
+      "Operations",
+      "Languages",
+      "Revenue Management"
+    ],
+    "image_path": "assets/illustrations/traveling.svg"
+  },
+  {
+    "id": "35",
+    "name": "Logistics & Supply Chain Management",
+    "category_id": "2",
+    "description": "Move goods efficiently from factory to customer: sourcing, warehousing and transport.",
+    "key_skills": [
+      "Planning",
+      "Inventory Management",
+      "Data Analysis",
+      "Negotiation",
+      "Process Improvement"
+    ],
+    "image_path": "assets/illustrations/logistics.svg"
+  },
+  {
+    "id": "36",
+    "name": "Entrepreneurship",
+    "category_id": "2",
+    "description": "Learn to start, fund and grow your own business from an idea.",
+    "key_skills": [
+      "Business Planning",
+      "Pitching",
+      "Finance Basics",
+      "Marketing",
+      "Leadership"
+    ],
+    "image_path": "assets/illustrations/starting-a-business-proyect.svg"
+  },
+  {
+    "id": "37",
+    "name": "English Language & Literature",
+    "category_id": "3",
+    "description": "Master English for teaching, translation, writing and international careers.",
+    "key_skills": [
+      "Writing",
+      "Linguistics",
+      "Translation",
+      "Public Speaking",
+      "Critical Reading"
+    ],
+    "image_path": "assets/illustrations/learning-languages.svg"
+  },
+  {
+    "id": "38",
+    "name": "International Relations",
+    "category_id": "3",
+    "description": "Study diplomacy, global politics and how countries and organisations work together.",
+    "key_skills": [
+      "Diplomacy",
+      "Policy Analysis",
+      "Research",
+      "Negotiation",
+      "Foreign Languages"
+    ],
+    "image_path": "assets/illustrations/international-cooperation.svg"
+  },
+  {
+    "id": "39",
+    "name": "Psychology",
+    "category_id": "3",
+    "description": "Understand how people think, feel and behave, and help them through counselling.",
+    "key_skills": [
+      "Counselling",
+      "Research Methods",
+      "Empathy",
+      "Assessment",
+      "Communication"
+    ],
+    "image_path": "assets/illustrations/mental-health.svg"
+  },
+  {
+    "id": "40",
+    "name": "Music",
+    "category_id": "3",
+    "description": "Perform, compose and teach music, from Khmer classical to contemporary.",
+    "key_skills": [
+      "Performance",
+      "Composition",
+      "Music Theory",
+      "Ear Training",
+      "Collaboration"
+    ],
+    "image_path": "assets/illustrations/compose-music.svg"
+  },
+  {
+    "id": "41",
+    "name": "Interior Design",
+    "category_id": "3",
+    "description": "Design functional, beautiful indoor spaces for homes, offices and shops.",
+    "key_skills": [
+      "Space Planning",
+      "3D Visualization",
+      "Materials",
+      "Colour Theory",
+      "Client Communication"
+    ],
+    "image_path": "assets/illustrations/interior-design.svg"
+  },
+  {
+    "id": "42",
+    "name": "Film & Media Production",
+    "category_id": "3",
+    "description": "Write, shoot and edit films, videos and digital media content.",
+    "key_skills": [
+      "Storytelling",
+      "Cinematography",
+      "Video Editing",
+      "Directing",
+      "Sound Design"
+    ],
+    "image_path": "assets/illustrations/videographer.svg"
+  },
+  {
+    "id": "43",
+    "name": "Khmer Literature",
+    "category_id": "3",
+    "description": "Study Khmer language, literature and culture, for teaching, writing and research.",
+    "key_skills": [
+      "Khmer Writing",
+      "Literary Analysis",
+      "Research",
+      "Teaching",
+      "Cultural Knowledge"
+    ],
+    "image_path": "assets/illustrations/reading-book.svg"
+  },
+  {
+    "id": "44",
+    "name": "Political Science",
+    "category_id": "3",
+    "description": "Study government, public policy and how power works in society.",
+    "key_skills": [
+      "Policy Analysis",
+      "Research",
+      "Debate",
+      "Writing",
+      "Critical Thinking"
+    ],
+    "image_path": "assets/illustrations/voting.svg"
+  },
+  {
+    "id": "45",
+    "name": "Environmental Science",
+    "category_id": "4",
+    "description": "Study ecosystems and climate, and find ways to protect natural resources.",
+    "key_skills": [
+      "Field Research",
+      "Data Analysis",
+      "Ecology",
+      "GIS Mapping",
+      "Sustainability Planning"
+    ],
+    "image_path": "assets/illustrations/environmental-study.svg"
+  },
+  {
+    "id": "46",
+    "name": "Statistics",
+    "category_id": "4",
+    "description": "Collect, analyse and interpret data to answer questions and guide decisions.",
+    "key_skills": [
+      "Probability",
+      "Data Analysis",
+      "R / Python",
+      "Survey Design",
+      "Modelling"
+    ],
+    "image_path": "assets/illustrations/statistics.svg"
+  },
+  {
+    "id": "47",
+    "name": "Dentistry",
+    "category_id": "5",
+    "description": "Diagnose and treat problems of the teeth, gums and mouth.",
+    "key_skills": [
+      "Clinical Skills",
+      "Oral Surgery",
+      "Patient Care",
+      "Precision",
+      "Anatomy"
+    ],
+    "image_path": "assets/illustrations/hospital-patient.svg"
+  },
+  {
+    "id": "48",
+    "name": "Midwifery",
+    "category_id": "5",
+    "description": "Care for mothers and babies through pregnancy, birth and the first weeks.",
+    "key_skills": [
+      "Prenatal Care",
+      "Delivery Support",
+      "Newborn Care",
+      "Emergency Response",
+      "Counselling"
+    ],
+    "image_path": "assets/illustrations/pregnancy-stages.svg"
+  },
+  {
+    "id": "49",
+    "name": "Biomedical Science",
+    "category_id": "5",
+    "description": "Study the biology of disease and run the lab tests that diagnose it.",
+    "key_skills": [
+      "Laboratory Techniques",
+      "Microbiology",
+      "Biochemistry",
+      "Data Analysis",
+      "Research"
+    ],
+    "image_path": "assets/illustrations/medical-research.svg"
+  },
+  {
+    "id": "50",
+    "name": "Veterinary Medicine",
+    "category_id": "5",
+    "description": "Keep animals healthy: pets, livestock and wildlife.",
+    "key_skills": [
+      "Animal Care",
+      "Diagnosis",
+      "Surgery",
+      "Pharmacology",
+      "Communication"
+    ],
+    "image_path": "assets/illustrations/veterinary.svg"
   }
 ]

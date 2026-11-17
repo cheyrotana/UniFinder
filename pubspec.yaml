@@ -41,6 +41,7 @@ dependencies:
   path_provider: ^2.1.5
   uuid: ^4.4.2
   url_launcher: ^6.3.1
+  flutter_svg: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
     - assets/logo/
     - assets/university/
     - assets/career/
+    - assets/illustrations/
     - assets/data/
 
   fonts:

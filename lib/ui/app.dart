@@ -1,23 +1,77 @@
 import 'package:flutter/material.dart';
-import '../ui/common/Theme/app_styles.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../core/app_restart.dart';
+import '../core/env.dart';
+import '../core/settings_controller.dart';
 import '../routers/app_router.dart';
+import 'dev/dev_tools.dart';
+import 'theme/app_theme.dart';
 
-class App extends StatefulWidget {
-  const App({super.key});
+class App extends StatelessWidget {
+  const App({super.key, required this.prefs, required this.settings});
 
-  @override
-  State<App> createState() => _AppState();
-}
+  final SharedPreferences prefs;
+  final SettingsController settings;
 
-class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: AppColors.darkBackground,
+    return AppSettings(
+      controller: settings,
+      child: AppRestartScope(
+        builder: (context, key) => _RouterApp(key: key, prefs: prefs),
       ),
-      routerConfig: appRouter,
+    );
+  }
+}
+
+/// The MaterialApp with its own router; a restart builds a new one (back
+/// at the splash).
+class _RouterApp extends StatefulWidget {
+  const _RouterApp({super.key, required this.prefs});
+
+  final SharedPreferences prefs;
+
+  @override
+  State<_RouterApp> createState() => _RouterAppState();
+}
+
+class _RouterAppState extends State<_RouterApp> {
+  late final GoRouter _router = AppRouter.create();
+
+  @override
+  void dispose() {
+    _router.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final settings = AppSettings.of(context);
+    return MaterialApp.router(
+      title: 'UniFinder',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.light(),
+      darkTheme: AppTheme.dark(),
+      themeMode: settings.themeMode,
+      themeAnimationDuration: const Duration(milliseconds: 300),
+      scaffoldMessengerKey: AppRouter.messengerKey,
+      routerConfig: _router,
+      builder: (context, child) => DevTools(
+        enabled: Env.devTools,
+        prefs: widget.prefs,
+        // Read below the dev tools' device frame, which swaps in the
+        // phone's size and safe areas.
+        child: Builder(
+          builder: (context) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: TextScaler.linear(settings.textScale),
+            ),
+            child: child!,
+          ),
+        ),
+      ),
     );
   }
 }
