@@ -13,6 +13,7 @@ import '../../widgets/cards.dart';
 import '../../widgets/common.dart';
 import '../../widgets/entrance.dart';
 import '../../widgets/pressable.dart';
+import '../../widgets/skeleton.dart';
 
 /// Home: a greeting, the quiz call-to-action, the student's dreams (swipe
 /// to delete, with undo) and a strip of popular majors.
@@ -29,10 +30,14 @@ class _HomeScreenState extends State<HomeScreen> {
   bool _loading = true;
   String _query = '';
 
-  /// Majors to suggest: the first of each category.
+  /// How many majors the strip shows before its "See more" tile.
+  static const _popularShown = 8;
+
+  /// Majors to suggest: the first two of each category, capped at
+  /// [_popularShown]. The rest are a tap away in Explore.
   late final List<Major> _popular = [
     for (final c in catalog.categories) ...catalog.majorsIn(c.id).take(2),
-  ];
+  ].take(_popularShown).toList();
 
   @override
   void initState() {
@@ -170,10 +175,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             const SliverToBoxAdapter(child: SizedBox(height: AppSpacing.sm)),
             if (_loading)
-              const SliverToBoxAdapter(
-                child: Padding(
-                  padding: EdgeInsets.all(AppSpacing.xxl),
-                  child: Center(child: CircularProgressIndicator()),
+              SliverPadding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: AppSpacing.gutter,
+                ),
+                sliver: SliverList.separated(
+                  itemCount: 3,
+                  separatorBuilder: (_, _) =>
+                      const SizedBox(height: AppSpacing.sm),
+                  itemBuilder: (_, _) => const _DreamCardSkeleton(),
                 ),
               )
             else if (_dreams.isEmpty)
@@ -222,12 +232,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(
                     horizontal: AppSpacing.gutter,
                   ),
-                  itemCount: _popular.length,
+                  itemCount: _popular.length + 1,
                   separatorBuilder: (_, _) =>
                       const SizedBox(width: AppSpacing.sm),
                   itemBuilder: (context, i) => SizedBox(
                     width: 150,
-                    child: MajorTile(major: _popular[i]),
+                    child: i < _popular.length
+                        ? MajorTile(major: _popular[i])
+                        : _SeeMoreTile(
+                            more: catalog.majors.length - _popular.length,
+                          ),
                   ),
                 ),
               ),
@@ -420,6 +434,109 @@ class _NoDreams extends StatelessWidget {
   }
 }
 
+/// The last tile of the popular-majors strip: opens Explore on its majors.
+class _SeeMoreTile extends StatelessWidget {
+  const _SeeMoreTile({required this.more});
+
+  /// How many majors the strip left out.
+  final int more;
+
+  @override
+  Widget build(BuildContext context) {
+    final primary = context.scheme.primary;
+    return Pressable(
+      onTap: () => context.go('/explore?tab=majors'),
+      child: Container(
+        decoration: BoxDecoration(
+          color: context.colors.brandSoft,
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+          border: Border.all(color: primary.withValues(alpha: 0.18)),
+        ),
+        padding: const EdgeInsets.all(AppSpacing.sm),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: context.colors.card,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(Icons.arrow_forward_rounded, color: primary),
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              'See more',
+              style: context.text.titleSmall!.copyWith(color: primary),
+            ),
+            if (more > 0) ...[
+              const SizedBox(height: 2),
+              Text(
+                '$more more majors',
+                style: context.text.bodySmall,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// A dream card's shape while the dreams load.
+class _DreamCardSkeleton extends StatelessWidget {
+  const _DreamCardSkeleton();
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      padding: EdgeInsets.zero,
+      clip: true,
+      child: SizedBox(
+        height: 96,
+        child: Shimmer(
+          child: Row(
+            children: [
+              const SkeletonBox(
+                width: _DreamCard._thumbWidth,
+                height: double.infinity,
+                radius: 0,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(14, 12, 40, 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      FractionallySizedBox(
+                        widthFactor: 0.75,
+                        child: SkeletonBox(height: 14),
+                      ),
+                      SizedBox(height: 8),
+                      FractionallySizedBox(
+                        widthFactor: 0.5,
+                        child: SkeletonBox(height: 12),
+                      ),
+                      SizedBox(height: 12),
+                      FractionallySizedBox(
+                        widthFactor: 0.6,
+                        child: SkeletonBox(height: 10),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 /// A saved dream: the major's photo (which flies to the dream screen),
 /// title, major, universities and date. Swipe left to delete.
 class _DreamCard extends StatelessWidget {
@@ -427,6 +544,8 @@ class _DreamCard extends StatelessWidget {
 
   final Dream dream;
   final VoidCallback onDelete;
+
+  static const double _thumbWidth = 108;
 
   @override
   Widget build(BuildContext context) {
@@ -449,81 +568,94 @@ class _DreamCard extends StatelessWidget {
         padding: EdgeInsets.zero,
         clip: true,
         onTap: () => context.push('/dream/${dream.id}', extra: dream),
-        child: IntrinsicHeight(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              SizedBox(
-                width: 108,
-                child: Hero(
-                  tag: HeroTags.dream(dream.id),
-                  child: major == null
-                      ? const AppImage(null)
-                      : MajorImage(major: major, cacheWidth: 330),
-                ),
+        // The text sets the card's height and the picture fills the strip
+        // on the left. (No IntrinsicHeight: scene thumbnails use a
+        // LayoutBuilder, which can't report intrinsic sizes.)
+        child: Stack(
+          children: [
+            Positioned(
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: _thumbWidth,
+              child: Hero(
+                tag: HeroTags.dream(dream.id),
+                child: major == null
+                    ? const AppImage(null)
+                    : MajorImage(major: major, cacheWidth: 330),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        dream.title ?? 'Untitled dream',
-                        style: context.text.titleSmall,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        major?.name ?? 'Unknown major',
-                        style: context.text.bodySmall!.copyWith(
-                          color: context.scheme.primary,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(height: AppSpacing.xs),
-                      Row(
+            ),
+            ConstrainedBox(
+              constraints: const BoxConstraints(minHeight: 96),
+              child: Row(
+                children: [
+                  const SizedBox(width: _thumbWidth),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.account_balance_outlined,
-                            size: 14,
-                            color: context.colors.muted,
+                          Text(
+                            dream.title ?? 'Untitled dream',
+                            style: context.text.titleSmall,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(width: 4),
-                          Text('$count', style: context.text.bodySmall),
-                          const SizedBox(width: AppSpacing.sm),
-                          Icon(
-                            Icons.calendar_today_outlined,
-                            size: 13,
-                            color: context.colors.muted,
-                          ),
-                          const SizedBox(width: 4),
-                          Flexible(
-                            child: Text(
-                              DateFormat('d MMM yyyy').format(dream.createdAt),
-                              style: context.text.bodySmall,
-                              overflow: TextOverflow.ellipsis,
+                          const SizedBox(height: 2),
+                          Text(
+                            major?.name ?? 'Unknown major',
+                            style: context.text.bodySmall!.copyWith(
+                              color: context.scheme.primary,
+                              fontWeight: FontWeight.w600,
                             ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: AppSpacing.xs),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.account_balance_outlined,
+                                size: 14,
+                                color: context.colors.muted,
+                              ),
+                              const SizedBox(width: 4),
+                              Text('$count', style: context.text.bodySmall),
+                              const SizedBox(width: AppSpacing.sm),
+                              Icon(
+                                Icons.calendar_today_outlined,
+                                size: 13,
+                                color: context.colors.muted,
+                              ),
+                              const SizedBox(width: 4),
+                              Flexible(
+                                child: Text(
+                                  DateFormat(
+                                    'd MMM yyyy',
+                                  ).format(dream.createdAt),
+                                  style: context.text.bodySmall,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: Icon(
+                      Icons.chevron_right_rounded,
+                      color: context.colors.subtle,
+                    ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8),
-                child: Icon(
-                  Icons.chevron_right_rounded,
-                  color: context.colors.subtle,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

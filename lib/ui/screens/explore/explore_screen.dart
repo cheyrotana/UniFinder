@@ -32,6 +32,14 @@ class _ExploreScreenState extends State<ExploreScreen> {
   final _search = TextEditingController();
 
   @override
+  void didUpdateWidget(ExploreScreen old) {
+    super.didUpdateWidget(old);
+    // The tab stays alive between visits; a link with another `?tab=`
+    // (e.g. Home's "See more") switches it.
+    if (old.initialTab != widget.initialTab) _tab = widget.initialTab;
+  }
+
+  @override
   void dispose() {
     _search.dispose();
     super.dispose();

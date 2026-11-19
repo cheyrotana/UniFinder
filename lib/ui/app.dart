@@ -1,3 +1,5 @@
+import 'dart:ui' show PointerDeviceKind;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -24,6 +26,15 @@ class App extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Lets a mouse or trackpad drag lists too (Flutter only drags with touch
+/// by default), so horizontal strips scroll on web and desktop.
+class _AppScrollBehavior extends MaterialScrollBehavior {
+  const _AppScrollBehavior();
+
+  @override
+  Set<PointerDeviceKind> get dragDevices => PointerDeviceKind.values.toSet();
 }
 
 /// The MaterialApp with its own router; a restart builds a new one (back
@@ -57,6 +68,7 @@ class _RouterAppState extends State<_RouterApp> {
       themeMode: settings.themeMode,
       themeAnimationDuration: const Duration(milliseconds: 300),
       scaffoldMessengerKey: AppRouter.messengerKey,
+      scrollBehavior: const _AppScrollBehavior(),
       routerConfig: _router,
       builder: (context, child) => DevTools(
         enabled: Env.devTools,
@@ -65,9 +77,9 @@ class _RouterAppState extends State<_RouterApp> {
         // phone's size and safe areas.
         child: Builder(
           builder: (context) => MediaQuery(
-            data: MediaQuery.of(context).copyWith(
-              textScaler: TextScaler.linear(settings.textScale),
-            ),
+            data: MediaQuery.of(
+              context,
+            ).copyWith(textScaler: TextScaler.linear(settings.textScale)),
             child: child!,
           ),
         ),
